@@ -8,6 +8,13 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
+/**
+ * The TabListManager handles the potentially multiple tablists running on the server and controls how players view it
+ *
+ * To make a TabList simply use the method {@link TabListManager#createTabList()} and then from there you can add players that will be displayed
+ * add viewers that will see the TabList and change latency, gamemode displayed and so forth.
+ *
+ */
 public class TabListManager {
     private final Set<TabList> tabLists = new CopyOnWriteArraySet<>();
     private TabList defaultTabList = this.createTabList();

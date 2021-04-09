@@ -16,6 +16,17 @@ import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CopyOnWriteArraySet;
 
+/**
+ * The TabList class handles a single TabList that gets sent out to {@link TabList#viewers} upon any changes
+ * to its viewers, displayed players, header, footer, latency, or gamemode
+ *
+ * To have someone see this TabList use {@link TabList#addViewer(Player)} and they will get this TabList
+ *
+ * To have someone be displayed on this TabList use {@link TabList#addDisplayedPlayer(Player)} and they will appear on the TabList
+ *
+ * Players that appear on the TabList can appear on multiple TabList's however a Player can only view at a time.
+ *
+ */
 public class TabList implements Viewable {
 
     private final List<Player> displayedPlayers = new CopyOnWriteArrayList<>();
